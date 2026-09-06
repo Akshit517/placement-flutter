@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/profilesModel.dart';
 import '../resources/R.dart';
 import '../screens/home/screens_for_apply/bottomModalApplySheet.dart';
+import 'debugLog.dart';
 
 class ProfileStatusIcon extends StatelessWidget {
   final String status;
@@ -77,7 +78,7 @@ class ProfileStatusIcon extends StatelessWidget {
                 context: context,
                 builder: (context) => BottomModalApplySheet(profile: profile));
               if (_didApply == true){
-                print("APPLIED!!");
+                debugLog("APPLIED!!");
                 model.refresh();
                 model.refreshDetails();
               }
